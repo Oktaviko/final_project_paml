@@ -1,3 +1,5 @@
+import 'package:final_project_paml/screen/screen_admin/authA_screen.dart';
+import 'package:final_project_paml/screen/screen_user/authU_screen.dart';
 import 'package:flutter/material.dart';
 
 class OptionScreen extends StatelessWidget {
@@ -57,7 +59,14 @@ class OptionScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         ElevatedButton.icon(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => AuthUScreen(),
+                              ),
+                            );
+                          },
                           icon: const Icon(Icons.person),
                           label: const Text(
                             "User",
@@ -75,7 +84,14 @@ class OptionScreen extends StatelessWidget {
                           width: 20,
                         ),
                         ElevatedButton.icon(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => AuthAScreen(),
+                              ),
+                            );
+                          },
                           icon: const Icon(Icons.lock),
                           label: const Text(
                             "Admin",
